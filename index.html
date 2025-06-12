@@ -4,17 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Random Image Viewer</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f9f9f9;
+      font-family: sans-serif;
+    }
+    img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+  </style>
 </head>
-<body style="display: flex; align-items: center; justify-content: center; height: 100vh; background-color: #f3f3f3;">
-  <img id="randomImage" src="" alt="Random Image" style="max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2);" />
+<body>
+  <img id="random-image" alt="Random Image" />
+
   <script>
-    const imageLinks = [
+    const images = [
       "https://drive.google.com/uc?export=view&id=1gY60Z0mjzy4boH3xXbU9QacZGcTIy4Le",
-      "https://drive.google.com/uc?export=view&id=1gjW59wR_8d7nSsmFq7nKmPdkb1kLvEpm",
-      "https://drive.google.com/uc?export=view&id=1gq88mR_XCvLbQWvRT1K0UOYwL5HD9dN9"
+      "https://drive.google.com/uc?export=view&id=1abc123...", 
+      "https://drive.google.com/uc?export=view&id=1xyz456...",
+      // بقیه لینک‌های مستقیم رو اینجا بذار
     ];
-    const randomIndex = Math.floor(Math.random() * imageLinks.length);
-    document.getElementById("randomImage").src = imageLinks[randomIndex];
+    const randomIndex = Math.floor(Math.random() * images.length);
+    document.getElementById("random-image").src = images[randomIndex];
   </script>
 </body>
 </html>
